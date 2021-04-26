@@ -3,17 +3,18 @@ import styled from "styled-components";
 import data from "../data.json";
 import { Link } from "react-router-dom";
 const WelcomeMessage = "Welcome";
-
+const { logoImage, title } = data.site;
+const { firstName } = data.profile;
 const Header = () => {
   return (
     <HeaderStyle>
       <Link to={"/Home"}>
-        <ImageContainer src={data.site.logoImage} />
+        <ImageContainer src={logoImage} />
       </Link>
-      <div>{data.site.title}</div>
+      <div>{title}</div>
       <Link to={"/Profile"}>
         <div>
-          {WelcomeMessage} {data.profile.firstName}
+          {WelcomeMessage} {firstName}
         </div>
       </Link>
     </HeaderStyle>
