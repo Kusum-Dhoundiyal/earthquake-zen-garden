@@ -6,18 +6,10 @@ import Home from "./Home";
 const Routes = () => {
   return (
     <div>
-      <Route path="/Home" exact>
-        <Home />
-      </Route>
-      <Route path="/Profile">
-        <Profile />
-      </Route>
-      <Route path="/Detail/:id">
-        <Detail />
-      </Route>
-      <Route path="/" exact>
-        <Home />
-      </Route>
+      <Route path="/Home" exact component={Home}></Route>
+      <Route path="/Profile" component={Profile}></Route>
+      <Route path="/Detail/:id" component={Detail}></Route>
+      <Route path="/" exact component={Home}></Route>
     </div>
   );
 };
